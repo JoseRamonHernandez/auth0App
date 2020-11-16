@@ -16,7 +16,7 @@
             </ul>
             <span class="navbar-text">
             <div *ngIf="auth.user$ | async as user">
-              <img src"{{user.picture}}" alt="">
+              <img src="{{user.picture}}" alt="">
             </div>
                 <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
                     <button class="btn btn-outline-danger" (click)="auth.logout({ returnTo: document.location.origin })">
